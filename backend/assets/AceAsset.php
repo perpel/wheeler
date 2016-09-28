@@ -18,11 +18,10 @@ class AceAsset extends AssetBundle
     
     public $sourcePath = '@bower/ace';
     public $css = [
-        'assets/css/bootstrap.min.css',
         'assets/font-awesome/4.5.0/css/font-awesome.min.css',
         'assets/css/fonts.googleapis.com.css',
         'assets/css/ace.min.css',
-        'assets/css/ace-part2.min.css',
+        'assets/css/ace-rtl.min.css'
     ];
     public $js = [
     ];
