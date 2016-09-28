@@ -13,6 +13,9 @@ return [
     'runtimePath' => '@runtime',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    // 'aliases' => [
+    //     '@foo' => \Yii::$app->request->hostinfo,
+    // ],
     'modules' => [],
     'components' => [
         'user' => [
@@ -37,6 +40,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
