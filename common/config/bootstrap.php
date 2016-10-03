@@ -6,3 +6,5 @@ Yii::setAlias('@backend', dirname(dirname(__DIR__)) . '/backend');
 Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
 Yii::setAlias('@runtime', dirname(dirname(__DIR__)) . '/runtime');
 Yii::setAlias('@uploads', dirname(dirname(__DIR__)) . '/uploads');
+
+Yii::setAlias('@wheeler', 'http://' . $_SERVER['HTTP_HOST'] . '/wheeler');
