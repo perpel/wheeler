@@ -60,8 +60,10 @@ class ProductCategory extends \yii\db\ActiveRecord
 
     public function type() {
         return [
-            'machine' => '车床',
-            'automation' => '自动化'
+            'machine' => '机床',
+            'automation' => '自动化',
+            'robot' => '工业机器人',
+            'digital' => '数字工厂'
         ];
     }
 
@@ -106,6 +108,7 @@ class ProductCategory extends \yii\db\ActiveRecord
 
     public function rootNavs($lgn, $type) {
         $nav = array();
+        $nav[$lgn] = array();
         $root = self::find()->where(['parent_id'=>0,'lgn_id'=>$lgn, 'type'=>$type])->asArray()->all();
         foreach ($root as $k => $v) {
            $nav[$lgn][$k]['title'] = $v['name'];
@@ -142,9 +145,9 @@ class ProductCategory extends \yii\db\ActiveRecord
         return Product::detail($id);
     }
 
-    public function defaultCategory() {
+    public function defaultCategory($type) {
         $lgn = Yii::$app->language=='zh-CN'?1:2;
-        $arr = self::find()->where("lgn_id=$lgn AND parent_id != 0")->select('id')->orderby('order')->asArray()->one();
+        $arr = self::find()->where("lgn_id=$lgn AND parent_id != 0 AND type='{$type}'")->select('id')->orderby('order')->asArray()->one();
         return $arr['id'];
     }
 

@@ -32,7 +32,7 @@ class Nav extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'lgn_id'], 'required'],
-            [['lgn_id'], 'integer'],
+            [['lgn_id', 'order'], 'integer'],
             [['name'], 'string', 'max' => 64],
             [['parent_id'], 'string', 'max' => 32],
             [['url', 'des'], 'string', 'max' => 255],
@@ -51,6 +51,7 @@ class Nav extends \yii\db\ActiveRecord
             'lgn_id' => '语言',
             'url' => '链接',
             'des' => '描述',
+            'order' => '排序'
         ];
     }
 
@@ -80,8 +81,10 @@ class Nav extends \yii\db\ActiveRecord
 
     static public function rootNavs($lgn) {
         $nav = array();
+        $nav[$lgn] = array();
         $root = self::find()
         ->where(['parent_id'=>0,'lgn_id'=>$lgn])
+        ->OrderBy(['order'=>SORT_DESC])
         ->asArray()->all();
         foreach ($root as $k => $v) {
            $nav[$lgn][$k]['label'] = $v['name'];
@@ -89,7 +92,7 @@ class Nav extends \yii\db\ActiveRecord
            if (count($url) != 2) {
                 $nav[$lgn][$k]['url'] = $v['url'];
            } else {
-                $nav[$lgn][$k]['url'][] = $v['url'];
+                $nav[$lgn][$k]['url'] = [$v['url']];
            }
            self::items($nav[$lgn][$k], $v['id'], $lgn);
         }
@@ -99,6 +102,7 @@ class Nav extends \yii\db\ActiveRecord
     static public function items(&$par, $id, $lgn) {
         $list = self::find()
         ->where(['parent_id'=>$id,'lgn_id'=>$lgn])
+        ->OrderBy(['order'=>SORT_DESC])
         ->asArray()->all();
         foreach ($list as $k => $v) {
             $par['items'][$k]['label'] = $v['name'];
@@ -106,7 +110,7 @@ class Nav extends \yii\db\ActiveRecord
             if (count($url) != 2) {
                 $par['items'][$k]['url'] = $v['url'];
             } else {
-                $par['items'][$k]['url'][] = $v['url'];
+                $par['items'][$k]['url'] = [$v['url']];
             }
             self::items($par['items'][$k], $v['id'], $lgn);
         }

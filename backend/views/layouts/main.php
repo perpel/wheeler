@@ -36,6 +36,7 @@ AppAsset::register($this);
     ]);
 
     $menuItems = [
+        ['label' => '首页管理', 'url' => ['/site/index']],
         ['label' => 'Banner管理', 'url' => ['/banner/index']],
         ['label' => '导航管理', 'url' => ['/nav/index']],
         [
@@ -45,6 +46,9 @@ AppAsset::register($this);
                 ['label'=>'产品管理', 'url' => ['/product/index']],
             ]
         ],
+        ['label' => '新闻中心', 'url' => ['/news/index']],
+        ['label' => '合作项目', 'url' => ['/program/index']],
+        ['label' => '关于我们', 'url' => ['/about/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];

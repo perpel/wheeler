@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\web\UploadedFile;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%product}}".
@@ -36,7 +37,7 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['type_id', 'order', 'lgn_id'], 'integer'],
+            [['type_id', 'order', 'lgn_id', 'recom_id'], 'integer'],
             [['content'], 'string'],
             [['name'], 'string', 'max' => 128],
             [['desc', 'url'], 'string', 'max' => 255],
@@ -62,7 +63,8 @@ class Product extends \yii\db\ActiveRecord
             'order' => '排序',
             'content' => '内容',
             'lgn_id' => '语言',
-            'file' => '上传'
+            'file' => '上传',
+            'recom_id' => '首页推荐'
         ];
     }
 
@@ -72,6 +74,30 @@ class Product extends \yii\db\ActiveRecord
 
     static public function detail($id) {
         return self::find($id)->asArray()->one();
+    }
+
+
+    static public function indexItems($tmp_id, $lgn_id, $limit = 5) {
+        $arr = self::find()->where(['recom_id'=>$tmp_id, 'lgn_id'=>$lgn_id])->limit($limit)->asArray()->all();
+        $items = array();
+        foreach ($arr as $k => $v) {
+            $items[$k]['label'] = $v['name'];
+            $items[$k]['href'] = $v['url'];
+            $items[$k]['id'] = $v['id'];
+            $items[$k]['parent_id'] = $v['type_id'];
+        }
+        return $items;
+    }
+
+    static public function indexItemsP($tmp_id, $lgn_id, $limit = 5) {
+        $arr = self::find()->where(['recom_id'=>$tmp_id, 'lgn_id'=>$lgn_id])->limit($limit)->asArray()->one();
+        return $arr['desc'];
+    }
+
+    public function dropDecomList() {
+        $list = \common\models\Index::find()->asArray()->all();
+        $cpt = ['0'=>'无'];
+        return ArrayHelper::merge($cpt, ArrayHelper::map($list, 'id', 'name'));
     }
 
     

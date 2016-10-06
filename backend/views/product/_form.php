@@ -52,6 +52,8 @@ echo $this->registerJS($js);
 
     <?= $form->field($model, 'content')->textarea(['rows' => 6, 'class'=>'KindEditor']) ?>
 
+    <?= $form->field($model, 'recom_id')->dropDownList($model->dropDecomList()) ?>
+
     <?= $form->field($model, 'lgn_id')->dropDownList(Language::dropDownList()) ?>
 
     <div class="form-group">

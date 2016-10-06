@@ -17,6 +17,8 @@ use common\models\Language;
 
     <?= $form->field($model, 'parent_id')->dropDownList(Nav::dropDownList()) ?>
 
+    <?= $form->field($model, 'order')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'des')->textInput(['maxlength' => true]) ?>

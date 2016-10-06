@@ -6,22 +6,13 @@ use yii\helpers\Html;
 
 class Section extends \yii\bootstrap\Widget {
 
-	public $info = [];
-
-	public function init() {
-		parent::init();
-		$banner = new \home\models\Section();
-		$this->info = $banner->sectionInfo();
-	}
-
     public function run() {
+        $info = new \common\models\Index();
     	return $this->render('section', [
-    		'machine' => $this->info['machine'],
-    		'equipment' => $this->info['equipment'],
-    		'automent' => $this->info['automent'],
-    		'factory' => $this->info['factory'],
-    		'news' => $this->info['news'],
-    		'case' => $this->info['case']
+            'type1' => $info->section(1),
+            'type2' => $info->section(2),
+    		'type3' => $info->section(3),
+    		'type4' => $info->section(4),
     	]);
     	
     }
