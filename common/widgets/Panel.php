@@ -33,6 +33,7 @@ class Panel extends \yii\bootstrap\Widget {
 	}
 
 	public function run() {
+		//return $this->render('panel');
 		echo Html::beginTag('div', ['class'=>'panel panel-default']);
 			echo $this->renderTitle();
 			echo Html::beginTag('div', ['class'=>'panel-collapse collapse ' . $this->in, 'id'=>$this->gengerateID()]);

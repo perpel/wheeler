@@ -19,7 +19,7 @@ class Menu extends \yii\bootstrap\Widget {
 
 		echo Nav::widget([
 		    'options' => ['class' => 'navbar-nav navbar-right'],
-		    'items' => Yii::t('app', 'nav'),
+		    'items' => \common\models\Nav::menus(),
 		]);
 
 		NavBar::end();

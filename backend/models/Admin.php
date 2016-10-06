@@ -1,5 +1,4 @@
 <?php
-
 namespace backend\models;
 
 use Yii;
@@ -63,6 +62,7 @@ class Admin extends \yii\db\ActiveRecord implements IdentityInterface
             [['username', 'auth_key', 'password_hash', 'password_reset_token', 'email'], 'string'],
             [['status', 'role', 'created_at', 'updated_at'], 'integer'],
             [['email'], 'unique'],
+            ['email', 'email'],
             [['username'], 'unique']
         ];
     }

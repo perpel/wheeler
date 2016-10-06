@@ -1,0 +1,1171 @@
+2016-10-03 20:49:56 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'whr_nav' already exists' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m161003_124444_nav.php(18): yii\db\Migration->createTable('{{%nav}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m161003_124444_nav->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m161003_124444_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'whr_nav' already exists
+The SQL being executed was: CREATE TABLE `whr_nav` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(64) NOT NULL,
+	`parent_id` varchar(32) NOT NULL DEFAULT 0,
+	`lgn_id` smallint(6) NOT NULL,
+	`url` varchar(255) DEFAULT '#',
+	`des` varchar(255)
+)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `w...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m161003_124444_nav.php(18): yii\db\Migration->createTable('{{%nav}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m161003_124444_nav->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m161003_124444_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'whr_nav' already exists
+)
+
+2016-10-03 20:49:53 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OLDPWD' => 'D:/xampp/htdocs/wheeler/common'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475498993.619
+    'REQUEST_TIME' => 1475498993
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-04 14:21:34 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: name' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php:157
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('create', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('create', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#8 {main}
+2016-10-04 14:21:34 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475562094.4166
+    'REQUEST_TIME' => 1475562094
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2016-10-04 15:15:09 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The step argument must be greater than 0.' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php:167
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('banner')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-04 15:15:09 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475565309.0936
+    'REQUEST_TIME' => 1475565309
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => 'banner'
+    ]
+    'argc' => 3
+]
+2016-10-04 15:15:30 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'whr_admin' already exists' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m160711_002929_admin.php(22): yii\db\Migration->createTable('{{%admin}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160711_002929_admin->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160711_002929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'whr_admin' already exists
+The SQL being executed was: CREATE TABLE `whr_admin` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(128) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255),
+	`email` varchar(128) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 1,
+	`role` smallint(6) NOT NULL DEFAULT 0,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `w...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m160711_002929_admin.php(22): yii\db\Migration->createTable('{{%admin}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160711_002929_admin->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160711_002929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'whr_admin' already exists
+)
+
+2016-10-04 15:15:22 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475565322.7916
+    'REQUEST_TIME' => 1475565322
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-04 15:17:17 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDOStatement::execute(): MySQL server has gone away' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDOStatement::e...', 'D:\\xampp\\htdocs...', 844, Array)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#3 D:\xampp\htdocs\wheeler\console\migrations\m160711_002929_admin.php(22): yii\db\Migration->createTable('{{%admin}}', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160711_002929_admin->up()
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160711_002929_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'PDOStatement::execute(): MySQL server has gone away
+The SQL being executed was: CREATE TABLE `whr_admin` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(128) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255),
+	`email` varchar(128) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 1,
+	`role` smallint(6) NOT NULL DEFAULT 0,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(yii\base\ErrorException), 'CREATE TABLE `w...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m160711_002929_admin.php(22): yii\db\Migration->createTable('{{%admin}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160711_002929_admin->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160711_002929_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2016-10-04 15:15:53 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475565353.0336
+    'REQUEST_TIME' => 1475565353
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-04 21:48:16 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The step argument must be greater than 0.' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php:167
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('product_categor...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-04 21:48:16 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475588896.77
+    'REQUEST_TIME' => 1475588896
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => 'product_category'
+    ]
+    'argc' => 3
+]
+2016-10-04 21:48:35 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: migrate/drop' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('drop', Array)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('drop', Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/drop', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/drop', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#6 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "migrate/drop".' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/drop', Array)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#3 {main}
+2016-10-04 21:48:35 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475588915.053
+    'REQUEST_TIME' => 1475588915
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/drop'
+        2 => 'product_category'
+    ]
+    'argc' => 3
+]
+2016-10-04 21:48:44 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The step argument must be greater than 0.' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php:167
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('product_categor...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-04 21:48:44 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475588924.406
+    'REQUEST_TIME' => 1475588924
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => 'product_category'
+    ]
+    'argc' => 3
+]
+2016-10-04 21:49:38 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The step argument must be greater than 0.' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php:167
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('m161004_132419_...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#9 {main}
+2016-10-04 21:49:38 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1804' => '85346648'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475588978.008
+    'REQUEST_TIME' => 1475588978
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => 'm161004_132419_product_category'
+    ]
+    'argc' => 3
+]
+2016-10-05 14:06:40 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDOStatement::execute(): MySQL server has gone away' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDOStatement::e...', 'D:\\xampp\\htdocs...', 844, Array)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#3 D:\xampp\htdocs\wheeler\console\migrations\m161005_041353_product.php(20): yii\db\Migration->createTable('{{%product}}', Array)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m161005_041353_product->up()
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m161005_041353_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'PDOStatement::execute(): MySQL server has gone away
+The SQL being executed was: CREATE TABLE `whr_product` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(128) NOT NULL,
+	`desc` varchar(255),
+	`url` varchar(255),
+	`type_id` int(11),
+	`order` smallint(6) DEFAULT 1,
+	`content` text,
+	`lgn_id` smallint(6)
+)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(yii\base\ErrorException), 'CREATE TABLE `w...')
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\xampp\htdocs\wheeler\console\migrations\m161005_041353_product.php(20): yii\db\Migration->createTable('{{%product}}', Array)
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m161005_041353_product->up()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m161005_041353_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2016-10-05 14:06:29 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1768' => '134143008'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475647589.1923
+    'REQUEST_TIME' => 1475647589
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-05 22:38:18 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare(true)
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#18 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare(true)
+#4 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\db\Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#16 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 D:\xampp\htdocs\wheeler\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 D:\xampp\htdocs\wheeler\yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-10-05 22:38:18 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss1768' => '134143008'
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw32\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANDROID_HOME' => 'D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.8.0_65\\lib;C:\\Program Files\\Java\\jdk1.8.0_65\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WCOJ7TS9DZOGFEQ'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOROOT' => 'D:\\Go\\'
+    'GO_HOME' => 'D:\\Go\\bin'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'WCOJ7TS9DZOGFEQ'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_65'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WCOJ7TS9DZOGFEQ'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw32\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw32\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Administrator\\bin;C:\\Ruby22\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\Go\\bin;C:\\Program Files\\Calibre2;C:\\Program Files\\OpenVPN\\bin;C:\\Users\\Administrator\\bin\\Sencha\\Cmd\\;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\bin;C:\\Program Files\\Java\\jdk1.8.0_65\\jre\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;D:\\apache-ant-1.9.6\\bin;D:\\adt-bundle-windows-x86-20140702\\sdk\\platform-tools;D:\\adt-bundle-windows-x86-20140702\\sdk\\tools;D:\\Go\\bin;D:\\xampp\\php;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'PHP_PATH' => 'D:\\xampp\\php'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_IDENTIFIER' => 'x86 Family 16 Model 6 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '16'
+    'PROCESSOR_REVISION' => '0602'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'D:/xampp/htdocs/wheeler'
+    'ProgramData' => 'C:\\ProgramData'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'WCOJ7TS9DZOGFEQ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1475678298.144
+    'REQUEST_TIME' => 1475678298
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

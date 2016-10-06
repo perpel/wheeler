@@ -3,63 +3,15 @@ return [
 	'home' => 'Wheeler Technology',
 	'address' => ' No.33,Hongken Road,Xiaoshan District,Hangzhou,P.R.China',
 	'tel' => ' 86-571-8369 5836',
-	'nav' => [
-		['label' => 'Home', 'url' => ['/site/index']],
-		[
-			'label' => 'About Us',
-			'items' => [
-				['label' => 'Company', 'url' => ['/site/contact']],
-				['label' => 'Corporate culture', 'url' => ['/site/contact']],
-				['label' => 'Our strengths', 'url' => ['/site/contact']],
-				['label' => 'Sales and Marketing', 'url' => ['/site/contact']],
-				['label' => 'products and solutions', 'url' => ['/site/contact']],
-				['label' => 'brand', 'url' => ['/site/contact']],
-				['label' => 'social responsibility', 'url' => ['/site/contact']],
-				['label' => 'Job', 'url' => ['/site/contact']],
-				['label' => 'Information', 'url' => ['/site/contact']],
-				['label' => 'Events', 'url' => ['/site/contact']],
-			]
-		],
-		[
-			'label' => 'Machine Tools',
-			'items' => [
-				['label' => 'EM Series Lathe', 'url' => ['/product/index']],
-				['label' => 'EC Series Lathe', 'url' => ['/product/equipment']],
-				['label' => 'BS Series Lathe', 'url' => ['/site/contact']],
-				['label' => 'BS Series Lathe', 'url' => ['/site/contact']],
-			]
-		],
-		[
-			'label' => 'Automated Systems',
-			'items' => [
-				[
-					'label' => 'of cooperation projects with the library card LOH Le', 
-					'url' => ['/site/contact']
-				],
-			]
-		],
-		[
-			'label' => 'News',
-			'items' => [
-				['label' => 'News', 'url' => ['/site/contact']],
-				['label' => 'Company Industry', 'url' => ['/site/contact']],
-				['label' => 'Internal Dynamics', 'url' => ['/site/contact']],
-			]
-		],
-		['label' => 'Information', 'url' => ['/site/contact']],
-		[
-			'label' => 'E-mail',
-			'url' => 'http://qiye.163.com/login/',
-			'linkOptions' => ['target' => '_ blank']
-		],
-		[
-			'label' => 'Language',
-			'items' => [
-				['label' => 'Simplified Chinese', 'url' => ['/site/language', 'lgn' => 'zh-CN']],
-				['label' => 'English', 'url' => ['/site/language', 'lgn' => 'en']]
-			]
+	'menuLgn' => [
+		'label' => 'LANGUAGE',
+		'items' => [
+			['label' => 'Simplified Chinese', 'url' => ['/site/language', 'lgn' => 'zh-CN']],
+			['label' => 'English', 'url' => ['/site/language', 'lgn' => 'en']]
 		]
 	],
+
+	'proudctTitle' => 'Product List',
 
 	'categoryMachineBed' => [
 		[

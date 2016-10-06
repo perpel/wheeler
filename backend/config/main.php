@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'language' => 'zh-CN',
+    'language'=>'zh-CN',
     'runtimePath' => '@runtime',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],

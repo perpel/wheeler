@@ -14,7 +14,7 @@ use yii\helpers\Html;
 
 		<?php foreach($machine['items'] as $key => $item):?>
 			<div class="thumbnail">
-				<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+				<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 	  					['alt'=>$item['alt']])?>
 			</div>
 			
@@ -37,7 +37,7 @@ use yii\helpers\Html;
 		</div>
 		<?php foreach($equipment['items'] as $key => $item):?>
 			<div class="thumbnail">
-				<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+				<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 	  					['alt'=>$item['alt']])?>
 			</div>
 			
@@ -59,7 +59,7 @@ use yii\helpers\Html;
 		</div>
 		<?php foreach($automent['items'] as $key => $item):?>
 			<div class="thumbnail">
-				<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+				<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 	  					['alt'=>$item['alt']])?>
 			</div>
 			
@@ -82,7 +82,7 @@ use yii\helpers\Html;
 
 		<?php foreach($factory['items'] as $key => $item):?>
 			<div class="thumbnail">
-				<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+				<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 	  					['alt'=>$item['alt']])?>
 			</div>
 			
@@ -108,7 +108,7 @@ use yii\helpers\Html;
 		<?php foreach($news['items'] as $key => $item):?>
 			<div class="col-md-6">
 				<div class="thumbnail">
-					<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+					<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 		  					['alt'=>$item['alt']])?>
 				</div>
 			</div>
@@ -136,7 +136,7 @@ use yii\helpers\Html;
 		<?php foreach($case['items'] as $key => $item):?>
 			<div class="col-md-6">
 				<div class="thumbnail">
-					<?= Html::img(Yii::$app->request->hostinfo . '/uploads/product/' . $item['src'],
+					<?= Html::img(Yii::getAlias("@wheeler") . '/uploads/product/' . $item['src'],
 		  					['alt'=>$item['alt']])?>
 				</div>
 			</div>

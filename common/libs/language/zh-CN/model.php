@@ -1,6 +1,9 @@
 <?php 
 
 return [
+        
+        'required' => '该信息不能为空',
+
 	'Admin' => [
 		'id' => 'ID',
                 'username' => '用户名',
@@ -21,4 +24,13 @@ return [
         ],
 
         'AdminLoginValidatePassword' => '用户名或密码错误',
+
+        'loginTitle' => '管理员登录',
+        'loginMsg' => '请键入登录信息',
+        'loginSubmitTitle' => '登录',
+
+        'AdminForm' => [
+
+        ],
+
 ];

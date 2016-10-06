@@ -1,6 +1,8 @@
 <?php
 
 return [
+
+        'required' => 'must be filled',
 	
 	'Admin' => [
 		'id' => 'ID',
@@ -22,5 +24,10 @@ return [
         ],
 
         'AdminLoginValidatePassword' => 'error',
+
+        'loginTitle' => 'Admin',
+        'loginMsg' => 'Please fill to downlist',
+        'loginSubmitTitle' => 'Login',
+
 
 ];

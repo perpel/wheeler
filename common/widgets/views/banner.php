@@ -17,7 +17,7 @@ use yii\helpers\Html;
 		<?php foreach($banner as $key => $value):?>
 			<div class="item<?= ($key==0)?' active':''?>">
 				<?= Html::img(
-					Yii::$app->request->hostinfo . '/uploads/banner/' . $value['src'], 
+					Yii::getAlias("@wheeler") . '/uploads/banner/' . $value['src'], 
 					['alt'=>$value['alt']]);
 				?>
 			</div>

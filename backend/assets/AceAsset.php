@@ -15,16 +15,15 @@ use yii\web\AssetBundle;
  */
 class AceAsset extends AssetBundle
 {
-    
-    public $sourcePath = '@bower/ace';
+    public $sourcePath = '@common/assets/ace/assets';
+    //public $sourcePath = '@wheeler-assets/ace';
     public $css = [
-        'assets/font-awesome/4.5.0/css/font-awesome.min.css',
-        'assets/css/fonts.googleapis.com.css',
-        'assets/css/ace.min.css',
-        'assets/css/ace-rtl.min.css'
+        'font-awesome/4.5.0/css/font-awesome.min.css',
+        'css/fonts.googleapis.com.css',
+        'css/ace.min.css',
+        'css/ace-rtl.min.css'
     ];
-    public $js = [
-    ];
+    public $js = [];
 }
 
 
