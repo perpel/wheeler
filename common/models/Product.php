@@ -73,7 +73,7 @@ class Product extends \yii\db\ActiveRecord
     }
 
     static public function detail($id) {
-        return self::find($id)->asArray()->one();
+        return self::find()->where(array('id'=>$id))->asArray()->one();
     }
 
 

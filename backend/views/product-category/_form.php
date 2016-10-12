@@ -23,6 +23,8 @@ use common\models\Language;
 
     <?= $form->field($model, 'type')->dropDownList($model->type()) ?>
 
+    <?= $form->field($model, 'recom_id')->dropDownList($model->dropDecomList()) ?>
+
     <?= $form->field($model, 'lgn_id')->dropDownList(Language::dropDownList()) ?>
 
     <div class="form-group">

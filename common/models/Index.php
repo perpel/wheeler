@@ -158,7 +158,7 @@ class Index extends \yii\db\ActiveRecord
     }
 
     public function items($tmp_id, $lgn_id, $limit) {
-        return \common\models\Product::indexItems($tmp_id, $lgn_id, $limit);
+        return \common\models\ProductCategory::indexItems($tmp_id, $lgn_id, $limit);
     }
 
     public function itemsNews($lgn_id, $limit) {

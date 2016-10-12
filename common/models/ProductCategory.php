@@ -34,7 +34,7 @@ class ProductCategory extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['parent_id', 'order', 'lgn_id'], 'integer'],
+            [['parent_id', 'order', 'lgn_id', 'recom_id'], 'integer'],
             ['order', 'default', 'value' => 1],
             [['name'], 'string', 'max' => 128],
             [['url'], 'string', 'max' => 255],
@@ -52,6 +52,7 @@ class ProductCategory extends \yii\db\ActiveRecord
             'name' => '名称',
             'url' => 'Url',
             'parent_id' => '上级元素',
+            'recom_id' => '首页推荐',
             'order' => '排序',
             'type' => '类型',
             'lgn_id' => '语言',
@@ -149,6 +150,24 @@ class ProductCategory extends \yii\db\ActiveRecord
         $lgn = Yii::$app->language=='zh-CN'?1:2;
         $arr = self::find()->where("lgn_id=$lgn AND parent_id != 0 AND type='{$type}'")->select('id')->orderby('order')->asArray()->one();
         return $arr['id'];
+    }
+
+    static public function indexItems($tmp_id, $lgn_id, $limit = 5) {
+        $arr = self::find()->where(['recom_id'=>$tmp_id, 'lgn_id'=>$lgn_id])->limit($limit)->asArray()->all();
+        $items = array();
+        foreach ($arr as $k => $v) {
+            $items[$k]['label'] = $v['name'];
+            $items[$k]['href'] = $v['url'];
+            $items[$k]['id'] = $v['id'];
+            $items[$k]['parent_id'] = $v['id'];
+        }
+        return $items;
+    }
+
+    public function dropDecomList() {
+        $list = \common\models\Index::find()->asArray()->all();
+        $cpt = ['0'=>'无'];
+        return ArrayHelper::merge($cpt, ArrayHelper::map($list, 'id', 'name'));
     }
 
     

@@ -23,7 +23,7 @@ use yii\helpers\Html;
 				
 				<div class="thumbnail-caption">
 					<?= Html::ul($item['items'], ['item'=>function($item, $index){
-		  					return Html::tag('li', Html::a($item['label'], [$item['href'], 'detail'=>$item['id'], 'id'=>$item['parent_id']]));
+		  					return Html::tag('li', Html::a($item['label'], [$item['href'], 'id'=>$item['parent_id']]));
 		  				}])?>
 				</div>
 			<?php endforeach;?>
